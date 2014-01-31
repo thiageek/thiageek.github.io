@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>@thiageek - Web Developer</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link href="tools/style.css" rel="stylesheet" type="text/css" />
+<link href="tools/960.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/Clarendon_LT_Std_700.font.js"></script>
+<script type="text/javascript">
+	Cufon.replace('h1,h3', {fontFamily: 'Clarendon LT Std', hover:true})
+</script>
+</head>
+<body>
+<div id="shim"></div>
+<div id="content">
+	<div class="logo_box"><img width="90%" src="http://www.thiageek.com.br/images/thiageek_inverse.jpg"></div>          
+	<div class="main_box">
+		<h2 style="color: #fff" id="title">Oi! Eu sou o @thiageek</h2>
+		<h2>Meu site ainda está em construção. Mas se desejar falar comigo pode usar um dos canais abaixo.</span></h2>
+		<ul class="info">
+			<li>
+				<h3><a href="mailto:eu@thiageek.com.br" style="color:#333">eu@thiageek.com.br</a></h3>
+				<p class="social">
+					<a href="http://www.twitter.com/thiageek" class="tw"></a>
+					<a href="http://www.facebook.com/thiageek" class="fb"></a>				
+					<a href="http://www.linkedin.com/profile/view?id=52396421&trk=hb_tab_pro_top" class="li"></a>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- script src="js/lib/jquery-1.7.1.min.js"></script -->
+<script src="js/RequestAnimationFrame.js"></script>
+<script src="js/jquery.yugop.txeff.js"></script>
+
+<script>
+ $(document).ready(function(){
+
+	var labels = new Array(
+		"Olá! :)",
+		"Eu sou o @thiageek.",
+		"Sou desenvolvedor de sistemas.");
+
+	var currPos = 0;
+
+	playNextString();
+
+	function playNextString()
+	{
+		$("#title").yugopeffect(labels[currPos], Math.floor(labels[currPos].length*2.5));
+
+		currPos++;
+		if(currPos==labels.length){
+			currPos = 0;
+		}
+		setTimeout(playNextString, 2060);
+	}
+
+
+
+});
+</script>
+
+</body>
+</html>
